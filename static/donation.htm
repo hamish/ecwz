@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>The Everest Childrens Welfare Zone: Make a donation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta type="description" content="The Everest Children Welfare Zone is a non-Government, non-profit organization (NGO) established with the objectives of protecting the welfare of Nepalese street children through education at the source of the problem. We bring about social awareness through educational programs designed to increase awareness of issues associated with street children."/>
+        <meta type="keywords" content="welfare, children, nepal, everest, education, volunteer, sponsor, donate, charity"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script language="javascript" type="text/javascript" src="validate.js"></script>
+        <script language="javascript" type="text/javascript">
+            function updateAmount()
+            {
+                var donationType = document.PayPalForm.donation_type;
+                var donationAmount = document.PayPalForm.amount;
+                if (donationType.value == 'other')
+                {
+                    donationAmount.readonly = false;
+                    donationAmount.className = 'amount';
+                    donationAmount.value = '';
+                    donationAmount.focus();
+                }
+                else
+                {
+                    donationAmount.value = donationType.value;
+                    donationAmount.className = 'disabled';
+                    donationAmount.readonly = true;
+                }
+            }
+        </script>
+    </head>
+
+    <body onload="updateAmount()">
+    <div class="title">The Everest Childrens Welfare Zone</div>
+
+        <div class="navigation">
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="our-objectives.htm">Our Objectives</a></li>
+                <li><a href="our-team.htm">Our Team</a></li>
+                <li><a href="projects.htm">Projects</a></li>
+                <li><a href="how-you-can-help.htm">How You Can Help</a></li>
+                <li><a href="thanks.htm">Thanks</a></li>
+                <li><a href="links.htm">Links</a></li>
+                <div class="block"></div>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Make a donation</h1>
+
+            <p></p>
+
+            <form class="application" name="PayPalForm" method="post" onsubmit="return validate()" action="https://www.paypal.com/cgi-bin/webscr">
+                <input type="hidden" name="cmd" value="_xclick"/>
+                <input type="hidden" name="business" value="narainnepal@gmail.com"/>
+                <input type="hidden" name="item_name" value=""/>
+                <input type="hidden" name="currency_code" value="AUD"/>
+
+                <div class="error" id="validationErrors"></div>
+
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr class="required">
+                        <td colspan="3">Required fields are marked with a <span class="required">*</span></td>
+                    </tr>
+                    <tr>
+                        <th><label for="donation_type">Donation type:</label></th>
+                        <td colspan="2"><select name="donation_type" id="donation_type" onchange="updateAmount()" tabindex="1">
+                            <option value="220">Annual Child Sponsorship (with rent) - $220</option>
+                            <option value="145">Annual Child Sponsorship (without rent) - $145</option>
+                            <option value="other">Other amount</option>
+                        </select></td>
+                    </tr>
+                    <tr class="alt">
+                        <th><label for="amount">Donation amount:</label><span class="required">*</span></th>
+                        <td colspan="2">AUD <input type="text" name="amount" id="amount" class="disabled" tabindex="2"/>
+                        <span class="error" id="amount_error"></span></td>
+                    </tr>
+                    <tr>
+                        <th><label>Your name:</label></th>
+                        <td><label for="first_name">First name<span class="required">*</span></label>
+                            <br /><input type="text" class="name" id="first_name" name="first_name" tabindex="3" />
+                            <span class="error" id="first_name_error"></span></td>
+                        <td><label for="last_name">Last name<span class="required">*</span></label>
+                            <br /><input type="text" class="name" id="last_name" name="last_name" tabindex="4" />
+                            <span class="error" id="last_name_error"></span></td>
+                    </tr>
+                    <tr class="alt">
+                        <th><label for="email">Email address:</label><span class="required">*</span></th>
+                        <td colspan="2"><input type="text" class="email" id="email" name="email" tabindex="5" />
+                        <span class="error" id="email_error"></span></td>
+                    </tr>
+                    <tr class="submit">
+                        <td style="text-align:left;"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/popup/OLCWhatIsPayPal-outside" target="WhatIsPaypal" onclick="window.open(this.href,'WhatIsPayPal','width=400,height=350,scrollbars=yes,resizable=yes,toolbar=no,directories=no,location=no,status=no');return false;"><img src="https://www.paypalobjects.com/en_AU/i/logo/PayPal_mark_50x34.gif" alt="PayPal Acceptance Mark" border="0"></a></td>
+                        <td colspan="2"><input type="submit" class="button" value="Pay Now" title="Make your donation via PayPal" tabindex="6" /></td>
+                        <td class="error">&nbsp;</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="footer">web design by kate currie</div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-4822580-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+    </body>
+</html>

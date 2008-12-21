@@ -1,8 +1,20 @@
-application: hdc
+application: ecwz-website
 version: 1
 runtime: python
 api_version: 1
 
 handlers:
-- url: /.*
-  script: hdc.py
+- url: /
+  static_files: static/index.htm
+  upload: static/index.htm
+
+- url: /images
+  static_dir: images
+
+- url: /(.*\.(htm|css))
+  static_files: static/\1
+  upload: static/(.*\.(htm|css))
+
+- url: /apply.php
+  script: apply.py
+

@@ -1,0 +1,461 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: arial, verdana, helvetica, sans-serif;
+	color: #421;
+	font-size: 76%;
+    line-height: 1.3em;
+	background-color: #ca6;
+}
+
+/***** general links *****/
+
+a:link
+{
+	color: #c90;
+}
+
+a:visited
+{
+    color: #532;
+}
+
+a:hover
+{
+    color: #06c;
+}
+
+a:active
+{
+}
+
+/***** title *****/
+
+div.title
+{
+    padding: 5px 8px;
+    width: 694px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: #865;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    background-color: #532;
+}
+
+span.title
+{
+    font-weight: bold;
+}
+
+/***** navigation *****/
+
+div.navigation
+{
+    margin-top: -1px;
+    padding: 0 11px;
+    width: 690px;
+    line-height: 1.4em;
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+html>body div.navigation
+{
+    margin-top: 0;
+}
+
+div.navigation ul
+{
+	width: 100%;
+	display: block;
+	float: none;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: Verdana, sans-serif;
+}
+
+div.navigation ul li
+{
+  	position: relative;
+  	padding: 0em;
+	margin: 0em;
+	display: block;
+	float: left;
+}
+
+div.navigation a:link,
+div.navigation a:visited
+{
+    padding: 1px 8px;
+    color: #532;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.navigation a:hover
+{
+    color: #a73;
+    background-color: #fec;
+    text-decoration: none;
+}
+
+div.navigation a#current
+{
+    color: #a73;
+    cursor: default;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+/***** content *****/
+
+div.content
+{
+    padding: 10px;
+    width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+h1
+{
+    margin: 1em 0;
+    padding: 0;
+    color: #b95;
+    font-weight: normal;
+    font-size: 2em;
+}
+html>body h1
+{
+    margin-top: 8px;
+}
+
+h2
+{
+    margin: 1.25em 0 0 0;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+ol
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+li
+{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+p
+{
+    margin: 0.5em 0;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+p.abstract
+{
+    margin-bottom: 1em;
+    line-height: 1.4em;
+}
+
+.required
+{
+    color: #c00;
+}
+.error
+{
+    color: #900;
+}
+.error ul
+{
+    margin-top: 4px;
+}
+.error li
+{
+    padding: 2px 0;
+}
+
+table
+{
+    margin: 0.5em 0;
+}
+
+th
+{
+    text-align: right;
+}
+
+td, th
+{
+    padding: 0.2em 0.5em;
+    font-size: 1.0em;
+	/** ie5.5 font size hack **/
+	\font-size: 76%;
+	f\ont-size: inherit;
+}
+html>body td, th
+{
+    font-size: inherit;
+}
+
+table.directors td
+{
+    vertical-align: top;
+}
+
+.block
+{
+	float: none;
+	clear: both;
+	display: block;
+}
+
+img.photo
+{
+    margin: 0em 0px 0em 0.5em;
+    border: 1px solid #532;
+}
+.inline
+{	
+	float:right;
+	margin:0 5px 2px 5px;
+}
+div.inline p
+{
+	margin: 1em 0;
+	text-align:center;
+}
+div.inline img,
+img.inline
+{
+	width:250px;
+}
+
+.leftarea
+{
+    float: left;
+}
+
+.rightarea
+{
+        text-align: right;
+   float: right;
+}
+
+/***** quotebox *****/
+
+div.quotebox
+{
+    width: 160px;
+    margin: 5px 0 5px 10px;
+    padding: 5px 8px 18% 8px;
+    float: right;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #069;
+    text-align: right;
+    line-height: 1.5em;
+    background: #def;
+}
+div.quotebox h2
+{
+    margin: 0;
+}
+
+/***** spreadsheet *****/
+table.spreadsheet
+{
+    width: 100%;
+    border: 1px solid #069;
+}
+table.spreadsheet th,
+table.spreadsheet td
+{
+    color: #036;
+    background: #def;
+    border-right: 1px solid #fff;
+}
+table.spreadsheet th
+{
+    text-align: left;
+}
+table.spreadsheet td.number,
+table.spreadsheet td.sub
+{
+    text-align: right;
+}
+table.spreadsheet td.sub
+{
+    border: none;
+}
+table.spreadsheet thead th
+{
+    padding: 10px 2px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    background: #069;
+    border: none;
+}
+table.spreadsheet tbody th
+{
+    background: #cde;
+}
+table.spreadsheet tbody tr.odd td
+{
+    background: #ecf4ff;
+}
+table.spreadsheet tbody tr.even td
+{
+    background: #f2f9ff;
+}
+table.spreadsheet tfoot td,
+table.spreadsheet tfoot th
+{
+    font-weight: bold;
+    background: #cde;
+}
+
+/*** form ***/
+form
+{
+    margin: 0;
+}
+input.name,
+input.phone
+{
+    width: 7em;
+}
+input.email
+{
+    width: 15.4em;
+}
+input.amount
+{
+    width: 6em;
+}
+input.disabled
+{
+    color: #036;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+}
+input.date,
+input.text
+{
+    width: 10em;
+}
+input.initial
+{
+    width: 3em;
+}
+textarea.address
+{
+    width: 20em;
+    height: 3.6em;
+}
+textarea.comments
+{
+    width: 20em;
+    height: 7.2em;
+}
+
+/*** application form ***/
+form.application table
+{
+}
+form.application table th,
+form.application table td
+{
+    padding: 0.3em 0.6em 0.5em 0.6em;
+    border-bottom: 1px solid #fff;
+}
+form.application table tr th
+{
+    color: #fff;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #069;
+    vertical-align: top;
+}
+form.application table tr th span.required
+{
+    color: #f66;
+}
+form.application table tr td
+{
+    color: #369;
+    background-color: #d8e8f8;
+}
+form.application table tr.alt td
+{
+    background-color: #cde;
+}
+form.application table tr.submit td
+{
+    padding-right: 0;
+    text-align: right;
+    background-color: #fff;
+}
+form.application table tr.submit td input
+{
+    padding: 0.1em 0.5em;
+    color: #fff;
+    font-weight: bold;
+    background-color: #069;
+    border: 1px solid #036;
+    border-top: 1px solid #cde;
+    border-left: 1px solid #cde;
+}
+form.application table tr td.error
+{
+    color: #900;
+    vertical-align: top;
+    background-color: #fff;
+}
+form.application table tr.required td
+{
+    padding: 0;
+    color: #864;
+    text-align: right;
+    font-size: 0.9em;
+    background-color: #fff;
+}
+
+/***** footer *****/
+
+div.footer
+{
+    padding: 2px;
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+div.footer a
+{
+    color: #532;
+    text-decoration: none;
+}
+div.footer a:hover
+{
+    color: #532;
+    text-decoration: underline;
+}

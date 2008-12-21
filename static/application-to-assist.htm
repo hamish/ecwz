@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html> 
+    <head>
+        <title>The Everest Childrens Welfare Zone: Application to assist</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript">
+            function validate()
+            {
+                var validationErrors = new Array;
+                errorNum = 0;
+
+                if (document.application.firstname.value == '')
+                {
+                    validationErrors[errorNum++] = ('your first name');
+                }
+
+                if (document.application.lastname.value == '')
+                {
+                    validationErrors[errorNum++] = ('your last name');
+                }
+
+                if (document.application.address.value == '')
+                {
+                    validationErrors[errorNum++] = ('your address');
+                }
+
+                if (document.application.email.value == '')
+                {
+                    validationErrors[errorNum++] = ('your email address');
+                }
+
+                regEx = /^([a-zA-Z0-9])+([\.a-zA-Z0-9_-])*@([a-zA-Z0-9])+(\.[a-zA-Z0-9_-]+)+$/;
+                if (document.application.email.value != '' &&
+                    !regEx.test(document.application.email.value))
+                {
+                    validationErrors[errorNum++] = ('a valid email address');
+                }
+
+                if (document.application.dob.value == '')
+                {
+                    validationErrors[errorNum++] = ('your date of birth');
+                }
+
+                if (document.application.nationality.value == '')
+                {
+                    validationErrors[errorNum++] = ('your nationality');
+                }
+
+                if (document.application.gender.value == '')
+                {
+                    validationErrors[errorNum++] = ('your gender');
+                }
+
+                if (document.application.occupation.value == '')
+                {
+                    validationErrors[errorNum++] = ('your occupation');
+                }
+
+                if (validationErrors.length > 0)
+                {
+                    var message = '<h2>Please complete required fields</h2>' +
+                            '<p>To continue, please enter the following details and press <em>Send Application</em>:</p><ul>';
+
+                    for (var i = 0; i < validationErrors.length; i++)
+                    {
+                        message += '<li>' + validationErrors[i] + '</li>';
+                    }
+                    message += '</ul>';
+
+                    document.getElementById('errors').innerHTML = message;
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </head>
+    
+    <body>
+    <div class="title">The Everest Childrens Welfare Zone</div>
+            
+        <div class="navigation">
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="our-objectives.htm">Our Objectives</a></li>
+                <li><a href="our-team.htm">Our Team</a></li>
+                <li><a href="projects.htm">Projects</a></li>
+                <li><a href="how-you-can-help.htm">How You Can Help</a></li>
+                <li><a href="thanks.htm">Thanks</a></li>
+                <li><a href="links.htm">Links</a></li>
+                <div class="block"></div>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h1>Application to assist</h1>
+
+            <form class="application" name="application" method="post" action="apply.php" onsubmit="return validate();">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr class="required">
+                        <td colspan="4">Required fields are marked with a <span class="required">*</span></td>
+                    </tr>
+                    <tr class="alt">
+                        <th><label>Your name:</label></th>
+                        <td><label for="firstname">First name<span class="required">*</span></label>
+                            <br /><input type="text" class="name" id="firstname" name="firstname" /></td>
+                        <td><label for="initial">Initial</label>
+                            <br /><input type="text" class="initial" id="initial" name="initial" /></td>
+                        <td><label for="lastname">Last name<span class="required">*</span></label>
+                            <br /><input type="text" class="name" id="lastname" name="lastname" /></td>
+
+                        <td rowspan="10" class="error" id="errors"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="address">Address:</label><span class="required">*</span></th>
+                        <td colspan="3"><textarea class="address" name="address" id="address"></textarea></td>
+                    </tr>
+                    <tr class="alt">
+                        <th><label>Phone numbers:</label></th>
+                        <td><label for="phone">Phone</label>
+                            <br /><input type="text" class="phone" id="phone" name="phone" /></td>
+                        <td colspan="2"><label for="fax">Fax</label>
+                            <br /><input type="text" class="phone" id="fax" name="fax" /></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">Email address:</label><span class="required">*</span></th>
+                        <td colspan="3"><input type="text" class="email" id="email" name="email" /></td>
+                    </tr>
+                    <tr class="alt">
+                        <th><label for="dob">Date of birth:</label><span class="required">*</span></th>
+                        <td colspan="3"><label for="dob">(mm/dd/yyyy)</label>
+                            <br /><input type="text" class="date" id="dob" name="dob" /></td>
+                    </tr>
+                    <tr>
+                        <th><label for="nationality">Nationality:</label><span class="required">*</span></th>
+                        <td colspan="3"><input type="text" class="text" id="nationality" name="nationality" /></td>
+                    </tr>
+                    <tr class="alt">
+                        <th><label>Gender:</label><span class="required">*</span></th>
+                        <td colspan="3"><select name="gender" id="gender">
+                            <option value=""></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <th><label for="occupation">Occupation:</label><span class="required">*</span></th>
+                        <td colspan="3"><input type="text" class="text" id="occupation" name="occupation" /></td>
+                    </tr>
+                    <tr class="alt">
+                        <th><label for="education">Education:</label><span class="required">*</span></th>
+                        <td colspan="3"><select name="education" id="education">
+                            <option>High School Certificate</option>
+                            <option>Associates Degree</option>
+                            <option>Bachelors Degree</option>
+                            <option>Masters Degree</option>
+                            <option>Other</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <th><label for="comments">Additional<br />information:</label></th>
+                        <td colspan="3"><textarea class="comments" name="comments" id="comments"></textarea></td>
+                    </tr>
+                    <tr class="submit">
+                        <td colspan="4"><input type="submit" value="Send Application" /></td>
+                        <td class="error">&nbsp;</td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+
+        <div class="footer">web design by kate currie</div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-4822580-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+    </body>
+</html>

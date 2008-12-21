@@ -1,0 +1,13 @@
+Appilcation details:
+
+Name: {{ firstname }} {{ initial }} {{ lastname }}
+Address: {{ address }}
+Phone: {{ phone }}
+Fax: {{ fax }}
+Email: {{ email }}
+Date of Birth: {{ dob }}
+Nationality: {{ nationality }}
+Gender: {{ gender }}
+Occupation: {{ occupation }}
+Education: {{ education }}
+Additional information: {{ comments }}
